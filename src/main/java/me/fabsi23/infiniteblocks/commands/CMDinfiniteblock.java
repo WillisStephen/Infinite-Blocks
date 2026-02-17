@@ -81,7 +81,7 @@ public class CMDinfiniteblock implements CommandExecutor {
     private void addInfiniteItemOfType(Player player, Material type, String name) {
         ItemStack stack = new ItemStack(type);
         ItemMeta meta = stack.getItemMeta();
-        meta.getPersistentDataContainer().set(InfiniteBlocks.getNamespacedKey(), PersistentDataType.SHORT, (short) 1);
+        meta.getPersistentDataContainer().set(InfiniteBlocks.getNamespacedKey(), PersistentDataType.INTEGER, 1);
         if (name != null) {
             meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', name));
         }

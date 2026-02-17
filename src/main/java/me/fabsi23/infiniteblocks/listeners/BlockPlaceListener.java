@@ -33,7 +33,7 @@ public class BlockPlaceListener implements Listener {
         ItemMeta meta = inHand.getItemMeta();
         if (meta == null) return;
 
-        Short infinite = meta.getPersistentDataContainer().get(InfiniteBlocks.getNamespacedKey(), PersistentDataType.SHORT);
+        Integer infinite = meta.getPersistentDataContainer().get(InfiniteBlocks.getNamespacedKey(), PersistentDataType.INTEGER);
         if (infinite != null && infinite != 0) {
             updateLoreIfRequired(inHand, meta);
             double cost = InfiniteBlocksConfig.getMaterialCost(inHand.getType());
